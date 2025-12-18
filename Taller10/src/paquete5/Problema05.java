@@ -24,9 +24,9 @@ public class Problema05 {
         for (int i = 0; i < estudiantes.length; i++) {
             for (int j = 0; j < estudiantes[i].length; j++) {
                 String nombre = estudiantes[i][j];
-                char inicial = nombre.charAt(0);
+                String inicial = nombre.substring(0, 1);
 
-                if (inicial == 'S' || inicial == 'P' || inicial == 'T') {
+                if (inicial.equals("S") || inicial.equals("P") || inicial.equals("T")) {
                     acumulador += nombre + "\n";
                 }
             }
@@ -35,6 +35,4 @@ public class Problema05 {
         mensaje = String.format("Estudiantes con inicial S, P o T:\n%s ",acumulador);
         System.out.println(mensaje);
     }
-}
-
 }
